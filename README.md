@@ -20,19 +20,19 @@ The questions above feature entities that were not part of the training dataset 
 
 ## Notebooks
 
-### [Dataset](01_dataset.ipynb)
+### [Dataset](notebooks/01_dataset.ipynb)
 
 The first notebook contains the code for data ingestion of the Simple Questions datasets. The Wikidata client was used to retrieve the labels for both the entity and relation identifiers. The spacy library was utilized when identifying semantically similar entities was necessary during the entity mapping process. Preprocessing of the questions included removing accents, special characters and possessive suffixes to improve entity identification. 
 
-### [Experiments](02_experiments.ipynb)
+### [Experiments](notebooks/02_experiments.ipynb)
 
 In the second notebook are my initial experiments with single model architectures for both span entity and relation prediction. This approach didn't prove fruitful as the model struggled to learn both tasks effectively. Possible reasons for this include a bias towards learning entity spans during training and the complexity of the relation prediction task.
 
-### [Models](03_models.ipynb)
+### [Models](notebooks/03_models.ipynb)
 
 The models notebook contains the implementation of separate span entity and relation models, which proved to be effective in addressing the limitations of the single model approach. Both showed excellent performance, with the span prediction model achieving 87.52% Dataset Wide F1-score and the relation prediction model 88.55% accuracy on the test set. 
 
-### [Engine](04_engine.ipynb)
+### [Engine](notebooks/04_engine.ipynb)
 
 The final notebook showcases the development of the question-answering engine modules. Once the entity prediction is made, an initial query is constructed to obtain its ID. If this query is unsuccessful, the system searches for the closest match. The builder and executor modules adhere to the SPARQL documentation. You can explore the examples in this notebook or run the [enquire.py](enquire.py) file from the terminal to experiment further.
 
