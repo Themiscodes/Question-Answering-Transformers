@@ -1,4 +1,4 @@
-# Question Answering with Transformers
+# Question Answering with Transformers
 
 The purpose of this project was the development of a question answering engine over the Wikidata knowledge graph. The implementation leverages the Bidirectional Encoder Representations from Transformers (BERT) model to perform Span Entity and Relation prediction on questions posed in natural English. An overview can be seen below.
 
